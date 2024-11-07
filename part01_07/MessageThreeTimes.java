@@ -1,5 +1,4 @@
 package part01_07;
-
 import java.util.Scanner;
 
 public class MessageThreeTimes {
@@ -13,6 +12,8 @@ public class MessageThreeTimes {
 		System.out.println(message);
 		System.out.println(message);
 		System.out.println(message);
+		
+		scanner.close();
 	}
 
 }
