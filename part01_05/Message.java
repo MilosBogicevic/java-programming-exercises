@@ -1,5 +1,4 @@
 package part01_05;
-
 import java.util.Scanner;
 
 public class Message {
