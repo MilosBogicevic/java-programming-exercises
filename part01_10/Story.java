@@ -1,5 +1,4 @@
 package part01_10;
-
 import java.util.Scanner;
 
 public class Story {
