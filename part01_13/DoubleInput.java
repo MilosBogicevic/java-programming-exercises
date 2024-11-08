@@ -10,6 +10,8 @@ public class DoubleInput {
 		double number = Double.valueOf(scanner.nextLine());
 		
 		System.out.println("You gave the number " + number);
+		
+		scanner.close();
 	}
 
 }
