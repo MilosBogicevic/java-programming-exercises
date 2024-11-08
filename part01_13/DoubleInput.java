@@ -1,5 +1,4 @@
 package part01_13;
-
 import java.util.Scanner;
 
 public class DoubleInput {
