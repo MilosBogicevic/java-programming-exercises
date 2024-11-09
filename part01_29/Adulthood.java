@@ -11,9 +11,9 @@ public class Adulthood {
 		int number = Integer.valueOf(scanner.nextLine());
 
 		if (number >= 18) {
-			System.out.println("You are an adult");
+			System.out.println("You are an adult.");
 		} else {
-			System.out.println("You are not an adult");
+			System.out.println("You are not an adult.");
 		}
 
 		scanner.close();
