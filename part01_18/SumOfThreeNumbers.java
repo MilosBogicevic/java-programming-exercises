@@ -1,5 +1,4 @@
 package part01_18;
-
 import java.util.Scanner;
 
 public class SumOfThreeNumbers {

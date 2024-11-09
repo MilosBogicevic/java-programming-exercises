@@ -1,7 +1,7 @@
-package part01_19;
+package part01_23;
 import java.util.Scanner;
 
-public class AdditionFormula {
+public class SimpleCalculator {
 
 	public static void main(String[] args) {
 		Scanner scanner = new Scanner(System.in);
@@ -13,8 +13,14 @@ public class AdditionFormula {
 		int secondNumber = Integer.valueOf(scanner.nextLine());
 		
 		int sum = firstNumber + secondNumber;
+		int difference = firstNumber - secondNumber;
+		int product = firstNumber * secondNumber;
+		double quotient = (double) firstNumber / secondNumber;
 		
 		System.out.println(firstNumber + " + " + secondNumber + " = " + sum);
+		System.out.println(firstNumber + " - " + secondNumber + " = " + difference);
+		System.out.println(firstNumber + " * " + secondNumber + " = " + product);
+		System.out.println(firstNumber + " / " + secondNumber + " = " + quotient);
 		
 		scanner.close();
 	}

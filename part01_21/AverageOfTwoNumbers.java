@@ -1,5 +1,4 @@
 package part01_21;
-
 import java.util.Scanner;
 
 public class AverageOfTwoNumbers {

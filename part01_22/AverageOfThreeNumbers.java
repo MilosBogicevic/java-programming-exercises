@@ -1,5 +1,4 @@
 package part01_22;
-
 import java.util.Scanner;
 
 public class AverageOfThreeNumbers {
