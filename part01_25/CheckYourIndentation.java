@@ -5,12 +5,12 @@ import java.util.Scanner;
 public class CheckYourIndentation {
 
 	public static void main(String[] args) {
-		Scanner scan = new Scanner(System.in);
+		Scanner scanner = new Scanner(System.in);
 
 		System.out.println("Give a number: ");
-		int first = Integer.valueOf(scan.nextLine());
+		int first = Integer.valueOf(scanner.nextLine());
 		System.out.println("Give another number: ");
-		int second = Integer.valueOf(scan.nextLine());
+		int second = Integer.valueOf(scanner.nextLine());
 
 		if (first == second) {
 			System.out.println("Same!");
