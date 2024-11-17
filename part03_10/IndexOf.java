@@ -20,11 +20,11 @@ public class IndexOf {
 		}
 
 		System.out.println("Search for? ");
-		int searchedNum = Integer.valueOf(scanner.nextLine());
+		int numberToFind = Integer.valueOf(scanner.nextLine());
 
 		for (int i = 0; i < numbersList.size(); i++) {
-			if (searchedNum == numbersList.get(i)) {
-				System.out.println(searchedNum + " is at index " + i);
+			if (numberToFind == numbersList.get(i)) {
+				System.out.println(numberToFind + " is at index " + i);
 			}
 		}
 
