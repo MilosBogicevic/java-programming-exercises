@@ -1,8 +1,8 @@
-package part03_26;
+package part03_27;
 
 import java.util.Scanner;
 
-public class LineByLine {
+public class AVClub {
 
 	public static void main(String[] args) {
 		Scanner scanner = new Scanner(System.in);
@@ -17,7 +17,9 @@ public class LineByLine {
 			String[] words = text.split("\\s+");
 
 			for (String word : words) {
-				System.out.println(word);
+				if (word.contains("av")) {
+					System.out.println(word);
+				}
 			}
 		}
 
