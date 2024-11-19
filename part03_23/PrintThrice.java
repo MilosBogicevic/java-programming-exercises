@@ -11,6 +11,7 @@ public class PrintThrice {
 		String word = scanner.nextLine();
 
 		System.out.print(word + word + word);
-	}
 
+		scanner.close();
+	}
 }
