@@ -1,4 +1,4 @@
-package part04_01;
+package part04_02;
 
 public class Account {
 
