@@ -6,8 +6,8 @@ public class Game {
 	private int homeTeamPoints;
 	private int visitingTeamPoints;
 
-	public Game(String hometeam, String visitingTeam, int homeTeamPoints, int visitingTeamPoints) {
-		this.homeTeam = hometeam;
+	public Game(String homeTeam, String visitingTeam, int homeTeamPoints, int visitingTeamPoints) {
+		this.homeTeam = homeTeam;
 		this.visitingTeam = visitingTeam;
 		this.homeTeamPoints = homeTeamPoints;
 		this.visitingTeamPoints = visitingTeamPoints;
@@ -21,21 +21,13 @@ public class Game {
 		return this.visitingTeam;
 	}
 
-	public int homeTeamPoints() {
-		return this.homeTeamPoints;
-	}
-
-	public int visitingTeamPoints() {
-		return this.visitingTeamPoints;
-	}
-
-	public boolean isWinner(String team) {
-		if (team.equalsIgnoreCase(homeTeam)) {
-			return homeTeamPoints > visitingTeamPoints;
-		} else if (team.equalsIgnoreCase(visitingTeam)) {
-			return visitingTeamPoints > homeTeamPoints;
+	public boolean isWinner(String teamName) {
+		if (teamName.equalsIgnoreCase(homeTeam) && homeTeamPoints > visitingTeamPoints) {
+			return true;
+		} else if (teamName.equalsIgnoreCase(visitingTeam) && visitingTeamPoints > homeTeamPoints) {
+			return true;
+		} else {
+			return false;
 		}
-
-		return false;
 	}
 }
