@@ -34,6 +34,26 @@ public class PaymentTerminal {
 		}
 	}
 
+	public boolean eatAffordably(PaymentCard card) {
+		double mealPrice = 2.5;
+		if (card.takeMoney(mealPrice)) {
+			affordableMeals++;
+			return true;
+		} else {
+			return false;
+		}
+	}
+
+	public boolean eatHeartily(PaymentCard card) {
+		double mealPrice = 4.3;
+		if (card.takeMoney(mealPrice)) {
+			heartyMeals++;
+			return true;
+		} else {
+			return false;
+		}
+	}
+
 	@Override
 	public String toString() {
 		return "money: " + money + ", number of sold affordable meals: " + affordableMeals
