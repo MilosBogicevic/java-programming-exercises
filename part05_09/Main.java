@@ -8,17 +8,19 @@ public class Main {
 		Person ethan = new Person("Ethan", 1, 110, 7);
 		Person peter = new Person("Peter", 33, 176, 85);
 
-		System.out.println(ethan.getName() + " weight: " + childrensHospital.weight(ethan) + " kilos");
-		System.out.println(peter.getName() + " weight: " + childrensHospital.weight(peter) + " kilos");
+		System.out.println("weighings performed: " + childrensHospital.weighings());
 
-		childrensHospital.feed(ethan);
-		childrensHospital.feed(ethan);
-		childrensHospital.feed(ethan);
+		childrensHospital.weight(ethan);
+		childrensHospital.weight(peter);
 
-		System.out.println("");
+		System.out.println("weighings performed: " + childrensHospital.weighings());
 
-		System.out.println(ethan.getName() + " weight: " + childrensHospital.weight(ethan) + " kilos");
-		System.out.println(peter.getName() + " weight: " + childrensHospital.weight(peter) + " kilos");
+		childrensHospital.weight(ethan);
+		childrensHospital.weight(ethan);
+		childrensHospital.weight(ethan);
+		childrensHospital.weight(ethan);
+
+		System.out.println("weighings performed: " + childrensHospital.weighings());
 	}
 
 }
