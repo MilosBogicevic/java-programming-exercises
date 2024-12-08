@@ -1,6 +1,10 @@
 package part05_10;
 
 public class PaymentTerminal {
+
+	private static final double AFFORDABLE_PRICE = 2.5;
+	private static final double HEARTY_PRICE = 4.3;
+
 	private double money;
 	private int affordableMeals;
 	private int heartyMeals;
@@ -12,11 +16,10 @@ public class PaymentTerminal {
 	}
 
 	public double eatAffordably(double payment) {
-		double mealPrice = 2.5;
-		if (payment >= mealPrice) {
-			affordableMeals++;
-			this.money += mealPrice;
-			return payment - mealPrice;
+		if (payment >= AFFORDABLE_PRICE) {
+			this.affordableMeals++;
+			this.money += AFFORDABLE_PRICE;
+			return payment - AFFORDABLE_PRICE;
 		} else {
 			return payment;
 		}
@@ -24,20 +27,18 @@ public class PaymentTerminal {
 	}
 
 	public double eatHeartily(double payment) {
-		double mealPrice = 4.3;
-		if (payment >= mealPrice) {
-			heartyMeals++;
-			this.money += mealPrice;
-			return payment - mealPrice;
+		if (payment >= HEARTY_PRICE) {
+			this.heartyMeals++;
+			this.money += HEARTY_PRICE;
+			return payment - HEARTY_PRICE;
 		} else {
 			return payment;
 		}
 	}
 
 	public boolean eatAffordably(PaymentCard card) {
-		double mealPrice = 2.5;
-		if (card.takeMoney(mealPrice)) {
-			affordableMeals++;
+		if (card.takeMoney(AFFORDABLE_PRICE)) {
+			this.affordableMeals++;
 			return true;
 		} else {
 			return false;
@@ -45,12 +46,18 @@ public class PaymentTerminal {
 	}
 
 	public boolean eatHeartily(PaymentCard card) {
-		double mealPrice = 4.3;
-		if (card.takeMoney(mealPrice)) {
+		if (card.takeMoney(HEARTY_PRICE)) {
 			heartyMeals++;
 			return true;
 		} else {
 			return false;
+		}
+	}
+
+	public void addMoneyToCard(PaymentCard card, double sum) {
+		if (sum > 0) {
+			card.addMoney(sum);
+			money += sum;
 		}
 	}
 
