@@ -22,4 +22,12 @@ public class Apartment {
 	public int priceDifference(Apartment compared) {
 		return Math.abs((this.squares * this.pricePerSquare) - (compared.squares * compared.pricePerSquare));
 	}
+
+	public boolean moreExpensiveThan(Apartment compared) {
+		if ((this.squares * this.pricePerSquare) > (compared.squares * compared.pricePerSquare)) {
+			return true;
+		} else {
+			return false;
+		}
+	}
 }
